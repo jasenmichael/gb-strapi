@@ -1,0 +1,46 @@
+{
+  "connection": "default",
+  "collectionName": "classes",
+  "info": {
+    "name": "class",
+    "description": "gb classes held"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "maxLength": 60,
+      "type": "string"
+    },
+    "starts_at": {
+      "required": true,
+      "type": "string",
+      "default": ""
+    },
+    "ends_at": {
+      "required": true,
+      "type": "string"
+    },
+    "teachers": {
+      "collection": "teacher",
+      "via": "classes",
+      "dominant": true
+    },
+    "days": {
+      "collection": "day",
+      "via": "classes",
+      "dominant": true
+    },
+    "description": {
+      "type": "text",
+      "default": ""
+    }
+  }
+}

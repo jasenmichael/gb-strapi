@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "days",
+  "info": {
+    "name": "day",
+    "description": "days of the week"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "minLength": 6,
+      "maxLength": 9,
+      "type": "string"
+    },
+    "classes": {
+      "collection": "class",
+      "via": "days"
+    }
+  }
+}
